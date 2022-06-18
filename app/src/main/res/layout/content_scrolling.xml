@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AppbarBotom"
+    tools:showIn="@layout/activity_appbar_botom">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/commom_padding_min"
+            android:layout_marginStart="@dimen/commom_padding_min"
+            android:layout_marginEnd="@dimen/commom_padding_min"
+            android:clickable="true"
+            android:focusable="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/common_padding_default"
+                android:paddingEnd="@dimen/common_padding_default"
+                android:paddingTop="@dimen/common_padding_default">
+
+                <ImageView
+                    android:id="@+id/imgCard"
+                    android:layout_width="@dimen/size_img_cardView"
+                    android:layout_height="@dimen/size_img_cardView"
+                    android:importantForAccessibility="no"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/ic_launcher_background"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBuy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_buy"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgCard"
+                    app:icon="@drawable/ic_add_shopping_cart"
+                    android:layout_marginTop="@dimen/commom_padding_min"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_skip"
+                    app:layout_constraintEnd_toStartOf="@+id/btnBuy"
+                    app:layout_constraintTop_toTopOf="@+id/btnBuy"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_title"
+                    app:layout_constraintStart_toEndOf="@+id/imgCard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="@dimen/common_padding_default"
+                    android:textAppearance="?attr/textAppearanceHeadline5"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
